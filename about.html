@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Rahul Kumar Vasule</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .card {
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: rotateY(5deg) rotateX(5deg) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-lg border-b border-gray-200">
+        <div class="container mx-auto flex items-center justify-between px-4 py-3">
+            <div class="flex items-center space-x-3">
+                <img src="https://scontent.fbho4-2.fna.fbcdn.net/v/t39.30808-6/441413831_7621523784562159_7986147336669137639_n.jpg"
+                    alt="SRJ Farms" class="h-10 w-10 rounded-full shadow-md shadow-orange-200 border border-orange-400">
+                <h1 class="text-xl font-extrabold text-orange-700 drop-shadow-md">SRJ Farms</h1>
+            </div>
+
+            <ul class="hidden md:flex space-x-8 text-gray-700 font-semibold">
+                <li><a href="#" class="hover:text-orange-600 transition">Home</a></li>
+                <li><a href="#" class="hover:text-orange-600 transition">Products</a></li>
+                <li><a href="#" class="hover:text-orange-600 transition">About</a></li>
+                <li><a href="#" class="hover:text-orange-600 transition">Contact Us</a></li>
+            </ul>
+
+            <button id="menu-btn"
+                class="md:hidden p-2 rounded-lg bg-orange-600 text-white shadow-md hover:bg-orange-700 focus:ring-2 focus:ring-orange-400 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu"
+        class="fixed top-0 right-0 w-64 h-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <div class="flex items-center justify-between p-4 border-b border-gray-200">
+            <h2 class="text-lg font-bold text-orange-700">SRJ Farms</h2>
+            <button id="close-btn" class="p-2 rounded-lg bg-red-500 text-white hover:bg-red-600 transition">
+                ✕
+            </button>
+        </div>
+        <ul class="flex flex-col space-y-4 p-6 text-gray-700 font-medium">
+            <li><a href="#" class="hover:text-orange-600 transition">Home</a></li>
+            <li><a href="#" class="hover:text-orange-600 transition">Products</a></li>
+            <li><a href="#" class="hover:text-orange-600 transition">About</a></li>
+            <li><a href="#" class="hover:text-orange-600 transition">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const closeBtn = document.getElementById("close-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.remove("translate-x-full");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            mobileMenu.classList.add("translate-x-full");
+        });
+    </script>
+
+
+
+
+
+
+
+
+    <header
+        class="relative w-full h-screen flex items-center justify-center bg-gradient-to-br from-orange-200 via-orange-100 to-white overflow-hidden">
+        <div class="absolute top-10 left-10 w-40 h-40 bg-orange-300 rounded-full blur-3xl opacity-40 animate-pulse">
+        </div>
+        <div
+            class="absolute bottom-20 right-10 w-48 h-48 bg-yellow-200 rounded-full blur-2xl opacity-40 animate-bounce">
+        </div>
+
+        <div
+            class="relative z-10 max-w-3xl text-center p-8 rounded-2xl bg-white/40 backdrop-blur-lg shadow-2xl border border-white/20">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 drop-shadow-lg">
+                🌿 Hello, welcome to <span class="text-orange-600">SRJ Farms</span>
+            </h1>
+            <hr class="my-6 border-t-4 border-orange-400 w-1/3 mx-auto rounded-full shadow-md" />
+            <p class="text-lg md:text-xl text-gray-700 font-medium drop-shadow-md">
+                Trusted brand loved by many people.
+            </p>
+            <div class="mt-8">
+                <a href="#products"
+                    class="px-6 py-3 text-lg font-semibold text-white bg-orange-600 rounded-xl shadow-lg shadow-orange-300 transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-400">
+                    About Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="about"
+        class="flex items-center justify-center p-6 relative py-20 bg-gradient-to-br from-orange-100 via-white to-orange-50 overflow-hidden">
+        <div class="max-w-5xl w-full space-y-10">
+
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 text-center drop-shadow-lg">
+                🎥 About <span class="text-orange-600">SRJ Farms</span>
+            </h2>
+
+            <!-- Divider -->
+            <hr class="my-6 border-t-4 border-orange-400 w-1/4 mx-auto rounded-full shadow" />
+
+            <!-- Video -->
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg shadow-orange-200">
+                <video controls autoplay muted loop class="w-full h-full object-cover">
+                    <source src="assets/img/vid1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <h1 class="text-3xl md:text-4xl font-extrabold text-center text-orange-800 drop-shadow-lg">
+                प्राकृतिक खेती अपनाकर रोल मॉडल बने राहुल कुमार वसूले
+            </h1>
+
+            <div class="card bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+                <div class="space-y-6 text-gray-700 text-justify leading-relaxed text-sm md:text-base">
+
+                    <p class="text-center">
+                        छिंदवाड़ा जिले के खजरी गांव के श्री राहुल कुमार वसूले आज एक प्रगतिशील कृषक हैं। इसके साथ-साथ वे
+                        गौ
+                        आधारित खेती के क्षेत्र में क्रांति लाने वाले नायक भी हैं...
+                    </p>
+
+                    <p>
+                        बी.टेक और एम.बी.ए. की शिक्षा लेने के बाद राहुल ने लगभग 15 वर्षों तक पॉवर प्लांट में कार्य किया,
+                        लेकिन अपने पिता और पुत्र को कैंसर जैसी गंभीर बीमारियों में खोने के बाद...
+                    </p>
+
+                    <p>
+                        गौ आधारित खेती को समझने और इसे प्रभावी ढंग से अपनाने के लिए राहुल ने राज्य सरकार एवम् केंद्र
+                        सरकार
+                        की मदद से देश के विभिन्न संस्थानों और वैज्ञानिकों से मार्गदर्शन लिया...
+                    </p>
+
+                    <p class="text-center font-bold text-orange-700 text-lg">🏆 उपलब्धियाँ</p>
+                    <p>
+                        राहुल की प्रगतिशीलता से उन्हें 'मिलेनियर फॉर्मर ऑफ इंडिया 2024', जैविक इंडिया अवार्ड, और भारतीय
+                        किसान संघ का स्व प्रभाकर राव केलकर अवार्ड जैसे प्रतिष्ठित सम्मानों से नवाज़ा गया।
+                    </p>
+
+                    <p class="text-center font-bold text-orange-700 text-lg">🌱 प्राकृतिक खेती का मॉडल</p>
+                    <p>
+                        श्री राहुल 10 एकड़ भूमि पर गेहूं, ज्वार, बाजरा, रागी, चना, मूंग, और सब्जियां उगाते हैं।
+                        "रसायनमुक्त
+                        नवरत्न आटा" उनकी सबसे बड़ी उपलब्धि है, जिससे क्षेत्र के 50 से अधिक लोगों को रोजगार मिला है।
+                    </p>
+
+                    <p>
+                        खेती करने के बाद उनका वार्षिक टर्नओवर 1.5 करोड़ रुपये से अधिक है और उनके उत्पाद देशभर के बड़े
+                        शहरों
+                        तक भेजे जाते हैं।
+                    </p>
+
+                    <p>
+                        "श्रीराम जैविक कृषक समूह" के माध्यम से उन्होंने 600 से अधिक किसानों को जोड़ा है, जिससे कई किसान
+                        प्राकृतिक खेती की ओर बढ़े हैं।
+                    </p>
+
+                    <p class="italic text-center font-semibold text-orange-900">
+                        "राष्ट्रहित सोच और मेहनत से हम समाज की दिशा भी सकारात्मक रूप में बदल सकते हैं।"
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
